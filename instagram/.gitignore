@@ -1,0 +1,5 @@
+config.json
+photos/pending/*
+photos/posted/*
+videos/pending/*
+videos/posted/*

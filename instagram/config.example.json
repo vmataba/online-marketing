@@ -1,0 +1,8 @@
+{
+    "username": "",
+    "password": "",
+    "pendingPhotosPath": "photos/pending",
+    "postedPhotosPath": "photos/posted",
+    "pendingVideosPath": "videos/pending",
+    "postedVideosPath": "videos/path"
+  }
