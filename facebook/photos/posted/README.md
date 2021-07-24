@@ -1,0 +1,1 @@
+## All photos posted to a facebook page will stay here
