@@ -21,7 +21,7 @@ This tool currently supports
  - pages_read_user_content
  - pages_manage_posts
  - pages_manage_engagement
- - public_profile 
+ - public_profile<br>
 When you are done with all the above procedures, rename the file
 facebook/config.example.py to facebook/config.py and fill required inputs
 
