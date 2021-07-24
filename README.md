@@ -22,8 +22,8 @@ This tool currently supports
  - pages_manage_posts
  - pages_manage_engagement
  - public_profile 
- When you are done with all the above procedures, rename the file
- facebook/config.example.py to facebook/config.py and fill required inputs
+When you are done with all the above procedures, rename the file
+facebook/config.example.py to facebook/config.py and fill required inputs
 
 ### 2. Instagram
 > In this case only username and password are required
