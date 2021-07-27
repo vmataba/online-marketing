@@ -33,9 +33,13 @@ try:
         if len(pendingPhotos) <= 0:
             print('No pending photos were found....')
         else:
-            firstPhotoName = pendingPhotos[0]
             try:
-                bot.upload_photo(os.path.join(pendingPhotosPath, firstPhotoName),options={'rename':False})
+                firstPhotoName = pendingPhotos[0]
+                plainName = firstPhotoName.split('.')[:-1]
+                caption = ''
+                for character in plainName:
+                    caption += character
+                bot.upload_photo(os.path.join(pendingPhotosPath, firstPhotoName),options={'rename':False},caption=caption)
                 shutil.move(os.path.join(pendingPhotosPath,firstPhotoName),os.path.join(postedPhotosPath,firstPhotoName))
                 print(f'''{firstPhotoName} has been posted to instagram''')
             except Exception as exception:

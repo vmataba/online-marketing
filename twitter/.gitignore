@@ -1,0 +1,10 @@
+config.json
+photos/pending/*.jpeg
+photos/pending/*.jpg
+photos/pending/*.png
+photos/posted/*.jpeg
+photos/posted/*.jpg
+photos/posted/*.png
+videos/pending/*.mp4
+videos/posted/*.mp4
+config
