@@ -48,6 +48,9 @@ In either parts (Facebook and Instagram) this is folder structure
     ```
     pip3 install instabot
     ```
+    ```
+    pip3 install ffmpeg-python
+    ```
 ## How to run the program
 After you have set up everything this is how you can run the program
 1. Post the first image from the pending images list

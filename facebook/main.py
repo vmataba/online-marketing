@@ -2,7 +2,7 @@ import facebook
 import os
 import shutil
 import json
-
+import sys
 
 config = {}
 
@@ -16,16 +16,16 @@ if len(config) == 0:
 
 accessToken = config['accessToken']
 
-pendingPhotosPath = config['pendingPhotosPath']
-postedPhotosPath = config['postedPhotosPath']
+def postPhoto():
+    pendingPhotosPath = config['pendingPhotosPath']
+    postedPhotosPath = config['postedPhotosPath']
 
-socialGraph = facebook.GraphAPI(accessToken)
-
-pendingPhotos = os.listdir(pendingPhotosPath)
-if len(pendingPhotos) <= 0:
-    print('No pending photos were found....')
-else:
+    pendingPhotos = os.listdir(pendingPhotosPath)
+    if len(pendingPhotos) <= 0:
+        exit('No pending photos were found....')
+    
     try:
+        socialGraph = facebook.GraphAPI(accessToken)
         firstPhotoName = pendingPhotos[0]
         plainName = firstPhotoName.split('.')[:-1]
         caption = ''
@@ -37,3 +37,5 @@ else:
     except Exception as exception:
         print(f'''{firstPhotoName} was not posted reason: {exception}''')
 
+if 'photo' in sys.argv:
+    postPhoto()
