@@ -1,0 +1,9 @@
+{
+    "accessToken": "",
+    "pageId": "",
+    "pageName": "",
+    "pendingPhotosPath": "photos/pending",
+    "postedPhotosPath": "photos/posted",
+    "pendingVideosPath": "videos/pending",
+    "postedVideosPath": "videos/path "
+  }
