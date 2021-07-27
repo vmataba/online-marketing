@@ -25,9 +25,13 @@ pendingPhotos = os.listdir(pendingPhotosPath)
 if len(pendingPhotos) <= 0:
     print('No pending photos were found....')
 else:
-    firstPhotoName = pendingPhotos[0]
     try:
-        photoPostResponse = socialGraph.put_photo(open(f'''{pendingPhotosPath}/{firstPhotoName}''','rb'),message=None)
+        firstPhotoName = pendingPhotos[0]
+        plainName = firstPhotoName.split('.')[:-1]
+        caption = ''
+        for character in plainName:
+            caption += character
+        photoPostResponse = socialGraph.put_photo(open(f'''{pendingPhotosPath}/{firstPhotoName}''','rb'),message=caption)
         shutil.move(f'''{pendingPhotosPath}/{firstPhotoName}''',f'''{postedPhotosPath}/{firstPhotoName}''')
         print(f'''{firstPhotoName} has been posted to a facebook page''')
     except Exception as exception:
